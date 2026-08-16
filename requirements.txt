@@ -1,0 +1,33 @@
+# ================== 第 0 阶段（现在就装） ==================
+openai>=1.40.0        # DeepSeek 的 OpenAI 兼容协议客户端（base_url 指向 api.deepseek.com）
+httpx>=0.27.0         # 手写裸调用练习 + 后续异步请求
+python-dotenv>=1.0.0  # 从 .env 读取密钥
+requests>=2.31.0      # 规章文档下载
+
+# ============ 以下各阶段依赖，到时取消注释安装 ============
+
+# ---- 第 1 阶段：RAG + 知识库管理 ----
+# python-docx>=1.1.0          # 解析 CCAR-25 官方 Word 版（首选语料格式）
+# pdfplumber>=0.11.0          # PDF 解析（备用）
+# lxml>=5.0.0                 # eCFR / EASA XML 解析
+# beautifulsoup4>=4.12.0      # HTML/XML 解析辅助
+# jieba>=0.42.1               # 中文分词（BM25 检索前置）
+# sentence-transformers>=3.0  # 本地运行 bge-m3 / bge-reranker
+# sqlite-vec>=0.1.6           # SQLite 向量检索扩展
+# numpy>=1.26.0               # 向量运算
+
+# ---- 第 2 阶段：工具 + MCP ----
+# pydantic>=2.8               # 工具参数校验（FastAPI 亦依赖）
+# mcp>=1.0.0                  # MCP Server 封装
+
+# ---- 第 3 阶段：Agent 引擎 + 前后端 + 多用户 ----
+# langgraph>=0.2.0            # 多 Agent 编排（状态机/interrupt/checkpointer）
+# sqlglot>=25.0.0             # Text-to-SQL 安全校验（语法树级）
+# fastapi>=0.115.0            # REST + SSE 服务层
+# uvicorn>=0.30.0             # ASGI 服务器
+# passlib>=1.7.4              # 密码加密（多用户）
+# python-jose>=3.3.0          # JWT
+# openpyxl>=3.1.0             # 符合性矩阵导出 Excel
+
+# ---- 质量保障 ----
+pytest>=8.0.0               # 单元测试（第 0 阶段起启用，SSE 解析等纯逻辑先行测试）

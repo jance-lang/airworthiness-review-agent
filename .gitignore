@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# 环境变量（含 API Key，绝不提交！）
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# ZCode 会话状态（本地工具目录）
+.zcode/
+
+# 数据与模型缓存（体积大，不入库）
+data/raw/*.pdf
+data/raw/*.doc
+data/raw/*.docx
+data/raw/*.xml
+data/raw/*.html
+models_cache/
+*.faiss
+chroma_db/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 测试缓存
+.pytest_cache/
+
+# 系统
+.DS_Store
+Thumbs.db
